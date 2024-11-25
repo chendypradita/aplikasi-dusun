@@ -13,6 +13,8 @@
                 @endif
 
                 @if ($errors->any())
+
+
                     <div class="alert alert-danger fade show" role="alert">
                         <ul>
                             @foreach ($errors->all() as $error)
@@ -23,7 +25,7 @@
                 @endif
 
 
-                <h2 class="display-4 text-center text-primary mb-4 font-tebal">Selamat Datang di Halaman Aplikasi Dusun</h2>
+                <h2 class="display-4 text-center text-primary mb-4 font-tebal">Selamat Datang di Halaman Aplikasi Dusun nando</h2>
             </div>
         </div>
 
