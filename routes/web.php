@@ -72,3 +72,4 @@ Route::resource('warga', WargaController::class);
 
 
 Route::resource('permohonan', PermohonanController::class);
+

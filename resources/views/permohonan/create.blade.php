@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <form action="{{ route('permohonan.store') }}" method="POST">
+    <form action="{{ route('permohonan.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="warga_id" class="form-label">Pilih Warga</label>
@@ -33,6 +33,14 @@
             <label for="keluhan" class="form-label">Keluhan</label>
             <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" id="keluhan" rows="5">{{ old('keluhan') }}</textarea>
             @error('keluhan')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="file" class="form-label">Unggah File (Opsional)</label>
+            <input type="file" class="form-control @error('file') is-invalid @enderror" name="file" id="file">
+            @error('file')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>

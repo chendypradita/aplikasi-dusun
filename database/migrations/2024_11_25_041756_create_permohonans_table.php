@@ -12,8 +12,16 @@ return new class extends Migration
             $table->id();
             $table->foreignId('warga_id')->constrained()->onDelete('cascade'); // Relasi dengan warga
             $table->text('keluhan'); // Kolom untuk keluhan
+            $table->string('file_path')->nullable(); // Kolom untuk menyimpan path file yang diupload
             $table->timestamps();
         });
     }
 
+    public function down()
+    {
+        Schema::dropIfExists('permohonans');
+    }
 };
+
+
+
