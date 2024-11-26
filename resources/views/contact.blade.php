@@ -48,118 +48,57 @@
 <style>
 
 
-    h2, h3 {
-        color: #2c3e50;
-        text-align: center;
-        margin-bottom: 20px;
-    }
 
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #555;
-        margin-bottom: 20px;
-        text-align: justify;
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 30px;
-    }
-
-    ul li {
-        margin: 10px 0;
-        font-size: 16px;
-        color: #333;
-    }
-
-    strong {
-        color: #2980b9;
-    }
-
-    a {
-        color: #2980b9;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    form {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 30px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    .form-control {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-
-    .form-control:focus {
-        border-color: #2980b9;
-        box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
-    }
-
-    .btn-primary {
-        background-color: #2980b9;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .btn-primary:hover {
-        background-color: #3498db;
-    }
-
-    .container .row {
-        margin: 0;
-    }
-
-    .container .col-md-12 {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* For responsive design */
-    @media (max-width: 768px) {
-        .container {
-            padding: 15px;
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            /* Menjamin semua kartu memiliki tinggi konsisten */
+            display: flex;
+            flex-direction: column;
+            /* Agar konten teratur secara vertikal */
         }
 
-        .container h2 {
-            font-size: 28px;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .container h3 {
-            font-size: 22px;
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            height: 200px;
         }
 
-        .container p, .container ul li {
-            font-size: 16px;
+        .card-body {
+            flex: 1;
+            /* Membuat card-body fleksibel agar tinggi seragam */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Ruang antara konten dan tombol */
         }
 
-        .form-control {
-            font-size: 14px;
+        .card-text {
+            flex: 1;
+            /* Memberikan ruang fleksibel pada teks */
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            /* Memberikan jarak kecil di bawah teks */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* Memastikan teks panjang tidak overflow */
+            white-space: wrap;
+            /* Membuat teks sesuai ukuran kartu */
         }
 
-        .btn-primary {
-            font-size: 16px;
+        .btn-block {
+            margin-top: auto;
+            /* Menyelaraskan tombol di bagian bawah */
         }
-    }
+    </style>
 </style>
 @endsection

@@ -79,80 +79,73 @@
 
 <style>
 
-h2, h3 {
-    color: #333;
-    margin-top: 30px;
-    font-size: 28px;
-}
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-}
+<style>
+        .font-tebal {
+            font-weight: bold;
+        }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
+        /* Carousel Styling */
+        .carousel-img {
+            height: 500px;
+            object-fit: cover;
+            /* Menjaga proporsi gambar dan memastikan gambar tidak terdistorsi */
+            width: 1200px;
+            /* Menyesuaikan lebar gambar */
+            margin: 0 auto;
+            /* Menyelaraskan gambar ke tengah */
+        }
 
-ul li {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            /* Menjamin semua kartu memiliki tinggi konsisten */
+            display: flex;
+            flex-direction: column;
+            /* Agar konten teratur secara vertikal */
+        }
 
-strong {
-    font-weight: bold;
-}
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.col-md-12 {
-    padding-top: 50px;
-}
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            height: 200px;
+        }
 
-h2 {
-    font-size: 36px;
-    color: #333;
-    text-align: center;
-}
+        .card-body {
+            flex: 1;
+            /* Membuat card-body fleksibel agar tinggi seragam */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Ruang antara konten dan tombol */
+        }
 
-h3 {
-    font-size: 24px;
-    color: #444;
-}
+        .card-text {
+            flex: 1;
+            /* Memberikan ruang fleksibel pada teks */
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            /* Memberikan jarak kecil di bawah teks */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* Memastikan teks panjang tidak overflow */
+            white-space: wrap;
+            /* Membuat teks sesuai ukuran kartu */
+        }
 
-p, ul {
-    margin-bottom: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Styling untuk daftar kontak */
-ul li strong {
-    color: #333;
-}
-
-ul li {
-    padding-left: 20px;
-}
-
-.container ul {
-    padding-left: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-footer p {
-    margin: 0;
-}
-
-
+        .btn-block {
+            margin-top: auto;
+            /* Menyelaraskan tombol di bagian bawah */
+        }
+    </style>
 </style>
 @endsection

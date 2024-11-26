@@ -25,7 +25,7 @@
                 @endif
 
 
-                <h2 class="display-4 text-center text-primary mb-4 font-tebal">Selamat Datang di Halaman Aplikasi Dusun nando</h2>
+                <h2 class="display-4 text-center text-primary mb-4 font-tebal">Selamat Datang di Halaman Aplikasi Dusun</h2>
             </div>
         </div>
 
